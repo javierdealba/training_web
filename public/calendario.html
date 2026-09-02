@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calendario integrado — Nombre genérico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/pages.css" />
+</head>
+<body data-page="calendario">
+  <div id="nav"></div>
+
+  <main class="section-sm">
+    <div class="container">
+      <div class="row-between wrap">
+        <div>
+          <div class="eyebrow">Multi-Coach Training</div>
+          <h1 style="font-size:32px">Semana del 8 al 14 de septiembre</h1>
+          <p class="muted mt-8">Tres coaches, un solo calendario. Cada sesión indica quién la programó.</p>
+        </div>
+        <div class="row wrap" style="gap:8px">
+          <span class="chip tag-run"><i class="dot"></i>Running · Carlos</span>
+          <span class="chip tag-strength"><i class="dot"></i>Fuerza · Diego</span>
+          <span class="chip tag-swim"><i class="dot"></i>Natación · Carla</span>
+          <span class="chip tag-mobility"><i class="dot"></i>Movilidad · Tomás</span>
+        </div>
+      </div>
+
+      <div class="grid g4 mt-24" id="cal-stats"></div>
+
+      <div class="cal mt-24" id="cal"></div>
+
+      <div class="grid g2 mt-24">
+        <div class="alert">
+          <div class="row" style="align-items:flex-start;gap:10px">
+            <span style="font-size:16px">⚠️</span>
+            <div>
+              <b>Posible conflicto de carga</b>
+              <p class="muted mt-8" style="font-size:13.5px">
+                Martes: fuerza de tren inferior (Diego) el mismo día que intervalos intensos (Carlos).
+                La plataforma no cambia el programa automáticamente.
+              </p>
+              <div class="row mt-16" style="gap:8px">
+                <button class="btn btn-quiet btn-sm">Revisar</button>
+                <button class="btn btn-quiet btn-sm">Contactar coach</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="eyebrow">Estados de sesión</div>
+          <div class="row wrap mt-16" style="gap:8px">
+            <span class="badge">Programado</span>
+            <span class="badge badge-ok">Completado</span>
+            <span class="badge badge-warn">Modificado</span>
+            <span class="badge">Omitido</span>
+          </div>
+          <p class="faint mt-24" style="font-size:12.5px">
+            Los coaches ven la programación relevante del resto del equipo, respetando
+            los permisos y la privacidad que defines tú.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

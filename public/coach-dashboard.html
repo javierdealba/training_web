@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel del coach — Nombre genérico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/pages.css" />
+</head>
+<body data-page="coach-dashboard">
+  <div id="nav"></div>
+
+  <main class="section-sm">
+    <div class="container">
+      <div class="row-between wrap">
+        <div>
+          <div class="eyebrow">Coach Dashboard</div>
+          <h1 style="font-size:32px">Carlos Martínez</h1>
+          <p class="muted mt-8">Running Coach · ELITE · 7 años de experiencia</p>
+        </div>
+        <div class="row wrap" style="gap:8px">
+          <button class="btn btn-quiet">Crear plantilla</button>
+          <button class="btn btn-primary">Crear sesión</button>
+        </div>
+      </div>
+
+      <div class="grid g4 mt-24" id="kpis"></div>
+
+      <div class="dash mt-24">
+        <div class="card">
+          <div class="row-between">
+            <div class="eyebrow" style="margin:0">Mis atletas</div>
+            <span class="faint" style="font-size:12.5px">Ordenados por prioridad de revisión</span>
+          </div>
+          <div class="mt-24" id="athletes"></div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <div class="eyebrow">Programación</div>
+            <div style="display:flex;flex-direction:column;gap:8px" class="mt-16">
+              <button class="btn btn-quiet btn-block">Crear sesión</button>
+              <button class="btn btn-quiet btn-block">Duplicar sesión</button>
+              <button class="btn btn-quiet btn-block">Crear semana</button>
+              <button class="btn btn-quiet btn-block">Crear programa</button>
+              <button class="btn btn-quiet btn-block">Asignar entrenamientos</button>
+            </div>
+            <p class="faint mt-16" style="font-size:12.5px">
+              Crea "10K Beginner — Semana 1" una vez y reutilízala con cada atleta.
+            </p>
+          </div>
+
+          <div class="card mt-24">
+            <div class="eyebrow">Ingresos del mes</div>
+            <div class="stat-k mt-8">$23,800 MXN</div>
+            <p class="faint mt-8" style="font-size:12.5px">
+              Bruto. Comisión de plataforma pendiente de definir (ejemplo del documento: 15%,
+              menor cuando el atleta lo trae el propio coach).
+            </p>
+          </div>
+
+          <div class="card mt-24">
+            <div class="eyebrow">Multi-Coach</div>
+            <p class="muted mt-8" style="font-size:13.5px">
+              Regina también entrena fuerza con Diego y natación con Carla.
+            </p>
+            <a class="btn btn-quiet btn-sm mt-16" href="/calendario">Ver su calendario integrado</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

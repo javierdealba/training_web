@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marketplace de coaches — Nombre genérico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/pages.css" />
+</head>
+<body data-page="marketplace">
+  <div id="nav"></div>
+
+  <main class="section-sm">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Coach Match</div>
+        <h2>Encuentra a tu especialista</h2>
+        <p>Ordenados por compatibilidad con tu objetivo, nivel, disponibilidad y presupuesto,
+        para que no tengas que navegar cientos de perfiles sin saber cuál elegir.</p>
+      </div>
+
+      <div class="market">
+        <aside class="card filters">
+          <div class="row-between">
+            <h4 style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)">Filtros</h4>
+            <button class="btn btn-quiet btn-sm" id="clear-filters">Limpiar</button>
+          </div>
+
+          <div class="filter-group mt-24">
+            <h4>Disciplina</h4>
+            <div class="filter-list">
+              <label class="filter-opt"><input type="checkbox" data-group="discipline" value="running" />Running</label>
+              <label class="filter-opt"><input type="checkbox" data-group="discipline" value="hyrox" />HYROX</label>
+              <label class="filter-opt"><input type="checkbox" data-group="discipline" value="strength" />Fuerza</label>
+              <label class="filter-opt"><input type="checkbox" data-group="discipline" value="swim" />Natación</label>
+              <label class="filter-opt"><input type="checkbox" data-group="discipline" value="mobility" />Movilidad</label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Nivel</h4>
+            <div class="filter-list">
+              <label class="filter-opt"><input type="checkbox" data-group="level" value="Principiante" />Principiante</label>
+              <label class="filter-opt"><input type="checkbox" data-group="level" value="Intermedio" />Intermedio</label>
+              <label class="filter-opt"><input type="checkbox" data-group="level" value="Avanzado" />Avanzado</label>
+              <label class="filter-opt"><input type="checkbox" data-group="level" value="Competitivo" />Competitivo</label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Modalidad</h4>
+            <div class="filter-list">
+              <label class="filter-opt"><input type="checkbox" data-group="modality" value="Online" />Online</label>
+              <label class="filter-opt"><input type="checkbox" data-group="modality" value="Presencial" />Presencial</label>
+              <label class="filter-opt"><input type="checkbox" data-group="modality" value="Híbrido" />Híbrido</label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Precio mensual — <span id="price-label" style="text-transform:none;letter-spacing:0">hasta $2,200 MXN</span></h4>
+            <input type="range" id="price" min="400" max="2200" step="50" value="2200" style="width:100%;accent-color:var(--volt)" />
+          </div>
+        </aside>
+
+        <div>
+          <p class="muted" style="font-size:13.5px"><b id="coach-count" style="color:var(--text)">0</b> coaches disponibles</p>
+          <div class="grid g2 mt-16" id="coach-grid"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

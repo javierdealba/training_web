@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil del coach — Nombre genérico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/pages.css" />
+</head>
+<body data-page="coach">
+  <div id="nav"></div>
+
+  <main class="section-sm">
+    <div class="container">
+      <a class="faint" href="/marketplace" style="font-size:13px">‹ Volver al marketplace</a>
+
+      <div class="card profile-head mt-16" id="coach-head"></div>
+
+      <div class="grid g2 mt-24">
+        <div class="card">
+          <div class="eyebrow">Por qué hace match contigo</div>
+          <div class="match-why mt-16" id="coach-why"></div>
+        </div>
+        <div class="card">
+          <div class="eyebrow">Especialidades</div>
+          <div class="row wrap mt-16" style="gap:8px" id="coach-specialties"></div>
+          <div class="eyebrow mt-24">Certificaciones</div>
+          <p class="muted mt-8" style="font-size:13.5px">Certificaciones profesionales verificadas por la plataforma.</p>
+        </div>
+      </div>
+
+      <section class="section-sm">
+        <div class="section-head">
+          <div class="eyebrow">Servicios</div>
+          <h2 style="font-size:28px">Elige tu nivel de coaching</h2>
+        </div>
+        <div class="grid g3" id="coach-services"></div>
+      </section>
+
+      <section class="section-sm">
+        <div class="section-head">
+          <div class="eyebrow">Resultados</div>
+          <h2 style="font-size:28px">Lo que han logrado sus atletas</h2>
+        </div>
+        <div class="card" id="coach-results"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "training-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prototipo (Etapa 1) del marketplace y sistema operativo de entrenamiento deportivo",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

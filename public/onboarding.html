@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onboarding — Nombre genérico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/pages.css" />
+</head>
+<body data-page="onboarding">
+  <div id="nav"></div>
+
+  <main class="section">
+    <div class="container wizard">
+      <div class="steps" id="steps"></div>
+      <div class="step-n" id="step-n"></div>
+      <h2 id="step-q"></h2>
+      <p class="muted" id="step-hint"></p>
+      <div class="opt-grid" id="opts"></div>
+      <div class="wizard-actions">
+        <button class="btn btn-quiet" id="back">Atrás</button>
+        <button class="btn btn-primary" id="next">Continuar</button>
+      </div>
+      <p class="faint mt-32" style="font-size:12.5px">
+        Con estas respuestas la plataforma calcula tu Coach Match: objetivo, disciplina, nivel,
+        disponibilidad y presupuesto contra la especialización y experiencia de cada coach.
+      </p>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

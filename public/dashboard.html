@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi entrenamiento — Nombre genérico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/pages.css" />
+</head>
+<body data-page="dashboard">
+  <div id="nav"></div>
+
+  <main class="section-sm">
+    <div class="container">
+      <div class="row-between wrap">
+        <div>
+          <h1 style="font-size:32px">Hola, Regina</h1>
+          <p class="muted mt-8">Tu equipo tiene 3 coaches y 6 sesiones programadas esta semana.</p>
+        </div>
+        <a class="btn btn-ghost" href="/marketplace">Añadir un coach</a>
+      </div>
+
+      <div class="dash mt-24">
+        <div>
+          <div class="card goal-card" id="goal"></div>
+
+          <div class="card mt-24">
+            <div class="row-between">
+              <div class="eyebrow" style="margin:0">Hoy</div>
+              <a class="faint" href="/calendario" style="font-size:13px">Ver semana ›</a>
+            </div>
+            <div class="mt-16" id="today"></div>
+          </div>
+
+          <div class="card mt-24">
+            <div class="eyebrow">Training Intelligence</div>
+            <div class="mt-16" id="insights"></div>
+            <p class="faint mt-24" style="font-size:12.5px">
+              La IA no cambia tu programa: sólo organiza la información. Las decisiones
+              de entrenamiento son de tus coaches.
+            </p>
+          </div>
+
+          <div class="card mt-24">
+            <div class="eyebrow">Athlete Passport</div>
+            <div class="mt-16" id="passport"></div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <div class="eyebrow">Regina's Training Team</div>
+            <div class="mt-8" id="team"></div>
+          </div>
+
+          <div class="alert mt-24" id="conflict"></div>
+
+          <div class="card mt-24">
+            <div class="eyebrow">Próximas sesiones</div>
+            <div class="mt-16" id="week-preview"></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

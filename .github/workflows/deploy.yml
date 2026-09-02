@@ -1,0 +1,48 @@
+name: Deploy a Azure App Service
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: training-web
+  NODE_VERSION: "22.x"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.webapp-url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Verificar sintaxis
+        run: |
+          node --check server.js
+          node --check public/assets/js/app.js
+          node --check public/assets/js/data.js
+
+      - name: Desplegar
+        id: deploy
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: .
+
+      - name: Comprobar health check
+        run: |
+          for i in $(seq 1 10); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://training-web-ffb4bpe2f8ctefge.westus2-01.azurewebsites.net/healthz || true)
+            if [ "$code" = "200" ]; then echo "Health check OK"; exit 0; fi
+            echo "intento $i -> $code"; sleep 15
+          done
+          echo "El sitio no respondió 200 en /healthz"; exit 1
